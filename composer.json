@@ -1,0 +1,39 @@
+{
+    "name": "soluzione-software/nova-resource-table-footer",
+    "description": "Nova resource table footer",
+    "keywords": [
+        "laravel",
+        "nova"
+    ],
+    "license": "MIT",
+    "require": {
+        "php": ">=7.1.0",
+        "illuminate/database": "5.8.*",
+        "illuminate/routing": "5.8.*",
+        "illuminate/support": "5.8.*|^6.0",
+        "laravel/nova": "^2.0"
+    },
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://nova.laravel.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "SoluzioneSoftware\\NovaResourceTableFooter\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "SoluzioneSoftware\\NovaResourceTableFooter\\ServiceProvider"
+            ]
+        }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
