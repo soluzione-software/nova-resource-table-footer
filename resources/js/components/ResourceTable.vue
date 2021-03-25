@@ -40,7 +40,3 @@ export default {
     extends: ResourceTable,
 }
 </script>
-
-<style scoped>
-
-</style>
