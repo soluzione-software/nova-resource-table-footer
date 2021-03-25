@@ -1,15 +1,8 @@
 let mix = require('laravel-mix')
 
-const novaPath = path.resolve(__dirname, './vendor/laravel/nova');
+const webpackConfig = require('./webpack.config')
 
 mix
     .setPublicPath('dist')
+    .webpackConfig(webpackConfig)
     .js('resources/js/index.js', 'js')
-    .webpackConfig({
-        resolve: {
-            alias: {
-                '@': path.resolve(novaPath, 'resources/js/'),
-                '@nova-path': novaPath,
-            },
-        },
-    })

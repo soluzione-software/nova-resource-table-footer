@@ -1,40 +1,17 @@
-import Router from 'vue-router';
+import registerComponents from "./components";
 
-import routes from "@nova-path/resources/js/router/routes";
+import overrideRoutes from "./router";
 
 import Index from "./views/Index";
 
 
-const newRoutes = {
-    index: {
-        component: Index,
-    },
-};
-
-let overrideRoutes = router => {
-    const options = {
-        routes: routes.map(route => {
-            return {
-                ...route,
-                ...newRoutes[route.name] || {},
-            };
-        })
-    };
-
-    const r = new Router(options);
-    router.matcher = r.matcher;
-}
-
-/**
- * @param {Vue} vue
- * @param {Router} router
- */
-let callback = (vue, router) => {
-    overrideRoutes(router);
-
+let registerViews = vue => {
     vue.component('resource-index', Index);
-    vue.component('resource-table', require('./components/ResourceTable'));
-    vue.component('resource-table-footer', require('./components/ResourceTableFooter'));
 }
 
-Nova.booting(callback)
+
+Nova.booting((vue, router) => {
+    registerComponents(vue);
+    registerViews(vue);
+    overrideRoutes(router);
+})

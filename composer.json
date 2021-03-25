@@ -11,7 +11,8 @@
         "illuminate/database": "5.8.*|^6.0",
         "illuminate/routing": "5.8.*|^6.0",
         "illuminate/support": "5.8.*|^6.0",
-        "laravel/nova": "^2.0"
+        "laravel/nova": "^2.0",
+        "soluzione-software/nova-custom-ui": "^0.1"
     },
     "repositories": [
         {

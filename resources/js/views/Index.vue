@@ -1,5 +1,5 @@
 <script>
-import Index from "@nova-path/resources/js/views/Index";
+import Index from "@custom-ui-path/resources/js/views/Index";
 
 export default {
     extends: Index,
