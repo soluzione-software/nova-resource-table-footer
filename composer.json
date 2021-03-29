@@ -12,7 +12,7 @@
         "illuminate/routing": "5.8.*|^6.0",
         "illuminate/support": "5.8.*|^6.0",
         "laravel/nova": "^2.0",
-        "soluzione-software/nova-custom-ui": "^0.2"
+        "soluzione-software/nova-custom-ui": "0.2.0"
     },
     "repositories": [
         {
